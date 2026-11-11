@@ -1,0 +1,52 @@
+/* SciCompPaths Notes — same look as the reels: warm paper, dot grid, coral highlight, ink text. */
+:root {
+  --paper: #fbf8f2;
+  --ink: #23272d;
+  --ink-2: #5d6168;
+  --line: #e7e1d6;
+  --accent: #d97863;
+  --accent-strong: #a9483a;
+  --dark: #1d2024;
+  --white: #ffffff;
+  --sage: #4e8a62;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: Inter, -apple-system, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  background-image: radial-gradient(rgba(150, 140, 125, 0.25) 1.5px, transparent 2px);
+  background-size: 28px 28px;
+  line-height: 1.5;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 64px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.brand { font-weight: 800; color: var(--ink); text-decoration: none; font-size: 18px; }
+.handle { font-family: ui-monospace, Consolas, monospace; color: var(--ink-2); font-size: 14px; text-decoration: none; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: var(--dark); color: var(--white); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
+.pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+h1 { font-size: clamp(34px, 8vw, 52px); line-height: 1.05; letter-spacing: -0.02em; margin: 18px 0 8px; font-weight: 900; }
+.mark { background: var(--accent); padding: 0 0.12em; border-radius: 0.12em; }
+.sub { color: var(--ink-2); font-size: 18px; margin: 0 0 22px; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 20px 60px -24px rgba(29, 32, 36, 0.18); overflow: hidden; }
+.preview { position: relative; }
+.preview img { display: block; width: 100%; height: auto; }
+.preview::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--white)); }
+.gate { padding: 22px; }
+.gate h2 { margin: 0 0 6px; font-size: 22px; }
+.gate p { margin: 0 0 14px; color: var(--ink-2); }
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+input[type=email] { flex: 1 1 220px; font: inherit; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--paper); }
+.btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; font: inherit; font-weight: 800; padding: 14px 22px; border-radius: 999px; border: 0; background: var(--accent); color: var(--ink); text-decoration: none; cursor: pointer; }
+.btn.dark { background: var(--dark); color: var(--white); }
+.fine { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+.done { display: none; }
+.done.on { display: block; }
+.list { display: grid; gap: 14px; margin-top: 18px; }
+.item { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; padding: 12px; text-decoration: none; color: inherit; }
+.item img { width: 120px; height: 63px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.item b { display: block; font-size: 18px; }
+.item span { color: var(--ink-2); font-size: 14px; }
+.foot { margin-top: 36px; text-align: center; color: var(--ink-2); font-size: 14px; }
+.foot a { color: var(--accent-strong); font-weight: 700; }
